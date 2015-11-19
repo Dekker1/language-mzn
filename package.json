@@ -1,14 +1,8 @@
 {
   "name": "language-mzn",
-  "main": "./lib/language-mzn",
   "version": "0.0.0",
-  "description": "A short description of your package",
-  "keywords": [
-  ],
-  "activationCommands": {
-    "atom-workspace": "language-mzn:toggle"
-  },
-  "repository": "https://github.com/atom/language-mzn",
+  "description": "Adds syntax highlighting for the MiniZinc constraint modelling language",
+  "repository": "https://github.com/jjdekker/language-mzn",
   "license": "MIT",
   "engines": {
     "atom": ">=1.0.0 <2.0.0"
