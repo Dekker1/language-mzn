@@ -1,0 +1,11 @@
+'scopeName': 'source.mzn'
+'fileTypes': [
+  'mzn'
+  'dzn'
+]
+'name': 'MiniZinc'
+'patterns':[
+  {
+    
+  }
+]
