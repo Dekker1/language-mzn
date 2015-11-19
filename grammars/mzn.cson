@@ -7,94 +7,94 @@
 'patterns':[
   {
     'comment': 'Line comments'
-    'match': '\%.*'
+    'match': '\\%.*'
     'name': 'comment.line.percentage.mzn'
   }
 
   {
     'comment': 'Block comments'
-    'begin': '/\*'
-    'end': '\*/'
+    'begin': '/\\*'
+    'end': '\\*/'
     'name': 'comment.block.mzn'
   }
 
   {
-    'match': '\'.*?\''
+    'match': '\\\'.*?\\\''
     'name': 'string.quoted.single.mzn'
   }
 
   {
-    'match': '\".*?\"'
+    'match': '\\".*?\\"'
     'name': 'string.quoted.double.mzn'
   }
 
   {
-    'match': '\b(ann|annotation|any|assert|constraint|function|in|include|list|of|op|output|minimize|maximize|par|predicate|record|satisfy|solve|test|type|var)\b'
+    'match': '\\b(ann|annotation|any|assert|constraint|function|in|include|list|of|op|output|minimize|maximize|par|predicate|record|satisfy|solve|test|type|var)\\b'
     'name': 'keyword.control.mzn'
   }
 
   {
-    'match': '\b(array|set|bool|enum|float|int|string|tuple)\b'
+    'match': '\\b(array|set|bool|enum|float|int|string|tuple)\\b'
     'name': 'storage.type.mzn'
   }
 
   {
-    'match': '\b(for|forall|if|then|else|where)\b'
+    'match': '\\b(for|forall|if|then|else|where)\\b'
     'name': 'keyword.control.mzn'
   }
 
   {
-    'match': '\b(abort|abs|acosh|array_intersect|array_union|array1d|array2d|array3d|array4d|array5d|array6d|asin|assert|atan|bool2int|card|ceil|concat|cos|cosh|dom|dom_array|dom_size|fix|exp|floor|index_set|index_set_1of2|index_set_2of2|index_set_1of3|index_set_2of3|index_set_3of3|int2float|is_fixed|join|lb|lb_array|length|ln|log|log2|log10|min|max|pow|product|round|set2array|show|show_int|show_float|sin|sinh|sqrt|sum|tan|tanh|trace|ub|ub_array)\b'
+    'match': '\\b(abort|abs|acosh|array_intersect|array_union|array1d|array2d|array3d|array4d|array5d|array6d|asin|assert|atan|bool2int|card|ceil|concat|cos|cosh|dom|dom_array|dom_size|fix|exp|floor|index_set|index_set_1of2|index_set_2of2|index_set_1of3|index_set_2of3|index_set_3of3|int2float|is_fixed|join|lb|lb_array|length|ln|log|log2|log10|min|max|pow|product|round|set2array|show|show_int|show_float|sin|sinh|sqrt|sum|tan|tanh|trace|ub|ub_array)\\b'
     'name': 'entity.name.function.mzn'
   }
 
   {
-    'match': '\b(alldifferent|cumulative|disjunctive|inverse|partition_set)\b'
+    'match': '\\b(alldifferent|cumulative|disjunctive|inverse|partition_set)\\b'
     'name': 'support.function.mzn'
   }
 
   {
-    'match': '\b(not|\+|-)\b'
+    'match': '\\b(not|\\+|-)\\b'
     'name': 'keyword.operator.math.mzn'
   }
 
   {
-    'match': '\b(&lt;-&gt;|-&gt;|&lt;-|\\/|xor|/\\)\b'
+    'match': '\\b(&lt;-&gt;|-&gt;|&lt;-|\\\\/|xor|/\\\\)\\b'
     'name': 'keyword.operator.logical.mzn'
   }
 
   {
-    'match': '\b(&lt;|&gt;|&lt;=|&gt;=|==|=|!=)\b'
+    'match': '\\b(&lt;|&gt;|&lt;=|&gt;=|==|=|!=)\\b'
     'name': 'keyword.operator.math.mzn'
   }
 
   {
-    'match': '\b(\+|-|\*|/|div|mod)\b'
+    'match': '\\b(\\+|-|\\*|/|div|mod)\\b'
     'name': 'keyword.operator.math.mzn'
   }
 
   {
-    'match': '\b(in|subset|superset|union|diff|symdiff|intersect)\b'
+    'match': '\\b(in|subset|superset|union|diff|symdiff|intersect)\\b'
     'name': 'keyword.operator.sets.mzn'
   }
 
   {
-    'match': '\|\.\.|\+\+'
+    'match': '\\|\\.\\.|\\+\\+'
     'name': 'keyword.operator.math.mzn'
   }
 
   {
-    'match': '\b(true|false)\b'
+    'match': '\\b(true|false)\\b'
     'name': 'constant.language.mzn'
   }
 
   {
-    'match': '\b([_A-Za-z])(\w*)\b'
+    'match': '\\b([_A-Za-z])(\\w*)\\b'
     'name': 'variable.other.mzn'
   }
 
   {
-    'match': '([+-]?)\d+(\.[^\.]\d*)?([eE][-+]?\d+)?'
+    'match': '([+-]?)\\d+(\\.[^\\.]\\d*)?([eE][-+]?\\d+)?'
     'name': 'constant.numeric.mzn'
   }
 ]
