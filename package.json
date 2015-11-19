@@ -1,7 +1,7 @@
 {
   "name": "language-mzn",
   "version": "0.0.0",
-  "description": "Adds syntax highlighting for the MiniZinc constraint modelling language",
+  "description": "Adds syntax highlighting for the MiniZinc constraint modeling language",
   "repository": "https://github.com/jjdekker/language-mzn",
   "license": "MIT",
   "engines": {
