@@ -1,0 +1,19 @@
+'.source.mzn':
+  'import globals':
+    'prefix': 'glob'
+    'body': 'include "globals.mzn";\n$1'
+  'array declaration':
+    'prefix': 'arr'
+    'body': 'array[$1] of ${2:int}: $3;\n$4'
+  'forall':
+    'prefix': 'for'
+    'body': 'forall($1) (\n\t$2\n)\n$3'
+  'forall with in':
+    'prefix': 'fori'
+    'body': 'forall($1 in $2) (\n\t$3\n)\n$4'
+  'sum':
+    'prefix': 'sum'
+    'body': 'sum($1) (\n\t$2\n)\n$3'
+  'sum with in':
+    'prefix': 'sumi'
+    'body': 'sum($1 in $2) (\n\t$3\n)\n$4'
