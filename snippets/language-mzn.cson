@@ -17,3 +17,13 @@
   'sum with in':
     'prefix': 'sumi'
     'body': 'sum($1 in $2) (\n\t$3\n)\n$4'
+
+  'solve satisfy':
+    'prefix': 'solve'
+    'body': 'solve satisfy;\n$1'
+  'solve minimize':
+    'prefix': 'min'
+    'body': 'solve minimize $1;\n$2'
+  'solve maximize':
+    'prefix': 'max'
+    'body': 'solve maximize $1;\n$2'
