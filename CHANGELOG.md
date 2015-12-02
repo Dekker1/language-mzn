@@ -1,5 +1,7 @@
 ## 0.3.0 - Colored constraints
 * Adds function coloring to all predicates documented in the 2.0 documentation.
+* Adds indentation rules for parentheses
+* Removes newlines from snippets (just press enter, the indentation rules will do the rest)
 
 ## 0.2.0 - Snippets
 * Adds snippets for basic MZN functionalities
