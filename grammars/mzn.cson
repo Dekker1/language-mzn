@@ -49,7 +49,56 @@
   }
 
   {
-    'match': '\\b(alldifferent|cumulative|disjunctive|inverse|partition_set)\\b'
+    'comment': 'Global constraints'
+    'match': '\\b(circuit|disjoint|maximum|maximum_arg|member|minimum|minimum_arg|network_flow|network_flow_cost|partition_set|range|roots|sliding_sum|subcircuit|sum_pred)\\b'
+    'name': 'support.function.mzn'
+  }
+
+  {
+    'comment': 'All-Different and related constraints'
+    'match': '\\b(alldifferent|all_different|all_disjoint|all_equal|alldifferent_except_0|nvalue|symmetric_all_different)\\b'
+    'name': 'support.function.mzn'
+  }
+
+  {
+    'comment': 'Lexicographic constraints'
+    'match': '\\b(lex2|lex_greater|lex_greatereq|lex_less|lex_lesseq|strict_lex2|value_precede|value_precede_chain)\\b'
+    'name': 'support.function.mzn'
+  }
+
+  {
+    'comment': 'Sorting constraints'
+    'match': '\\b(arg_sort|decreasing|increasing|sort)\\b'
+    'name': 'support.function.mzn'
+  }
+
+  {
+    'comment': 'Channeling constraints'
+    'match': '\\b(int_set_channel|inverse|inverse_set|link_set_to_booleans)\\b'
+    'name': 'support.function.mzn'
+  }
+
+  {
+    'comment': 'Counting constraints'
+    'match': '\\b(among|at_least|at_most|at_most1|count|count_eq|count_geq|count_gt|count_leq|count_lt|count_neq|distribute|exactly|global_cardinality|global_cardinality_closed|global_cardinality_low_up|global_cardinality_low_up_closed)\\b'
+    'name': 'support.function.mzn'
+  }
+
+  {
+    'comment': 'Packing constraints'
+    'match': '\\b(bin_packing|bin_packing_capa|bin_packing_load|diffn|diffn_k|diffn_nonstrict|diffn_nonstrict_k|geost|geost_bb|geost_smallest_bb|knapsack)\\b'
+    'name': 'support.function.mzn'
+  }
+
+  {
+    'comment': 'Scheduling constraints'
+    'match': '\\b(alternative|cumulative|disjunctive|disjunctive_strict|span)\\b'
+    'name': 'support.function.mzn'
+  }
+
+  {
+    'comment': 'Extensional constraints (table, regular etc.)'
+    'match': '\\b(regular|regular_nfa|table)\\b'
     'name': 'support.function.mzn'
   }
 
