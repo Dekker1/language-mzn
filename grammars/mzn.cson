@@ -1,9 +1,11 @@
 'scopeName': 'source.mzn'
+'name': 'MiniZinc'
+'comment': 'The MiniZinc medium level constraint modeling language'
 'fileTypes': [
   'mzn'
   'dzn'
 ]
-'name': 'MiniZinc'
+
 'patterns':[
   {
     'comment': 'Line comments'
