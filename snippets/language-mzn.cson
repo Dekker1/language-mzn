@@ -7,7 +7,7 @@
     'body': 'array[$1] of ${2:int}: $3;$4'
   'forall':
     'prefix': 'for'
-    'body': 'forall($1) (\t$2)$3'
+    'body': 'forall($1) ($2)$3'
   'sum':
     'prefix': 'sum'
     'body': 'sum($1) ($2)$3'

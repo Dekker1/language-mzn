@@ -1,3 +1,6 @@
+## 0.3.1 - One tab too far
+* Removes an tab in the forall snippet.
+
 ## 0.3.0 - Colored constraints
 * Adds function coloring to all predicates documented in the 2.0 documentation.
 * Adds indentation rules for parentheses
