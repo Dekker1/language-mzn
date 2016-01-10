@@ -1,11 +1,25 @@
 {
   "name": "language-mzn",
+  "main": "./lib/init",
   "version": "0.3.2",
-  "description": "Adds syntax highlighting for the MiniZinc constraint modeling language",
+  "description": "A language package for the MiniZinc constraint modeling language",
   "repository": "https://github.com/jjdekker/language-mzn",
   "license": "MIT",
   "engines": {
     "atom": ">=1.0.0 <2.0.0"
   },
-  "dependencies": {}
+  "dependencies": {
+    "atom-linter": "^2.0.5",
+    "atom-package-deps": "^2.0.1"
+  },
+  "package-deps": [
+    "linter"
+  ],
+  "providedServices": {
+    "linter": {
+      "versions": {
+        "1.0.0": "provideLinter"
+      }
+    }
+  }
 }

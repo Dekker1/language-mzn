@@ -1,3 +1,6 @@
+## 0.4.0
+- Combines the linter and syntax highlighting package (formerly https://github.com/jjdekker/linter-mzn). I'll look into the possibility of disabling the linter extension at a later stadium. 
+
 ## 0.3.2
 - Removes some duplicate syntax
 - Fixes the highlighting of numerical constants
