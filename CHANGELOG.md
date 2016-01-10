@@ -1,17 +1,21 @@
+## 0.3.2
+- Removes some duplicate syntax
+- Fixes the highlighting of numerical constants
+
 ## 0.3.1 - One tab too far
-* Removes an tab in the forall snippet.
+- Removes an tab in the forall snippet.
 
 ## 0.3.0 - Colored constraints
-* Adds function coloring to all predicates documented in the 2.0 documentation.
-* Adds indentation rules for parentheses
-* Removes newlines from snippets (just press enter, the indentation rules will do the rest)
+- Adds function coloring to all predicates documented in the 2.0 documentation.
+- Adds indentation rules for parentheses
+- Removes newlines from snippets (just press enter, the indentation rules will do the rest)
 
 ## 0.2.0 - Snippets
-* Adds snippets for basic MZN functionalities
-* Adds snippets for possible solve statements
+- Adds snippets for basic MZN functionalities
+- Adds snippets for possible solve statements
 
 ## 0.1.1 - `endif`
-* Adds syntax highlighting for the `endif` keyword
+- Adds syntax highlighting for the `endif` keyword
 
 ## 0.1.0 - First Release
-* Basic syntax highlighting
+- Basic syntax highlighting
