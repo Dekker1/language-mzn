@@ -31,7 +31,7 @@
   }
 
   {
-    'match': '\\b(ann|annotation|any|assert|constraint|function|in|include|list|of|op|output|minimize|maximize|par|predicate|record|satisfy|solve|test|type|var)\\b'
+    'match': '\\b(ann|annotation|any|constraint|function|in|include|list|of|op|output|minimize|maximize|par|predicate|record|satisfy|solve|test|type|var)\\b'
     'name': 'keyword.control.mzn'
   }
 
@@ -105,12 +105,7 @@
   }
 
   {
-    'match': '\\b(not|\\+|-)\\b'
-    'name': 'keyword.operator.math.mzn'
-  }
-
-  {
-    'match': '\\b(&lt;-&gt;|-&gt;|&lt;-|\\\\/|xor|/\\\\)\\b'
+    'match': '\\b(not|&lt;-&gt;|-&gt;|&lt;-|\\\\/|xor|/\\\\)\\b'
     'name': 'keyword.operator.logical.mzn'
   }
 
