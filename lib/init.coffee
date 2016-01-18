@@ -2,10 +2,14 @@
 
 module.exports = AtomLanguageMZN =
   config:
+    enableLinter:
+      type: 'boolean'
+      default: true
+      description: "Enable linting using `mzn2fzn`"
     mzn2fznPath:
       type: 'string'
       default: 'mzn2fzn'
-      description: "Path to Minizinc's compiler `mzn2fzn`"
+      description: 'Path to Minizinc\'s compiler `mzn2fzn`'
 
   activate: (state) ->
     console.log 'language-mzn: package loaded,

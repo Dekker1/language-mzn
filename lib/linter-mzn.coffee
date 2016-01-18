@@ -7,30 +7,33 @@ class LinterMZN
     atom.config.get "language-mzn.#{key}"
 
   lint: (textEditor) =>
-    return new Promise (resolve, reject) =>
-      output = ''
-      command = @config 'mzn2fznPath'
-      args = ['--instance-check-only', textEditor.getPath()]
-      options = process.env
+    if @config 'enableLinter'
+      return new Promise (resolve, reject) =>
+        output = ''
+        command = @config 'mzn2fznPath'
+        args = ['--instance-check-only', textEditor.getPath()]
+        options = process.env
 
-      stdout = (data) ->
-        atom.notifications.addWarning data
-      stderr = (data) ->
-        output += data
-      exit = (code) =>
-        if code is 0
+        stdout = (data) ->
+          atom.notifications.addWarning data
+        stderr = (data) ->
+          output += data
+        exit = (code) =>
+          if code is 0
+            resolve []
+          else
+            messages = @parse output, textEditor.getPath()
+            resolve messages
+
+        @lintProcess = new BufferedProcess({command, args, options, stdout, stderr, exit})
+        @lintProcess.onWillThrowError ({error, handle}) ->
+          atom.notifications.addError "Failed to run #{command}",
+            detail: "#{error.message}"
+            dismissable: true
+          handle()
           resolve []
-        else
-          messages = @parse output, textEditor.getPath()
-          resolve messages
-
-      @lintProcess = new BufferedProcess({command, args, options, stdout, stderr, exit})
-      @lintProcess.onWillThrowError ({error, handle}) ->
-        atom.notifications.addError "Failed to run #{command}",
-          detail: "#{error.message}"
-          dismissable: true
-        handle()
-        resolve []
+    else
+      return []
 
   parse: (output, filePath) =>
     messages = []
