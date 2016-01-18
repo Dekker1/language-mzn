@@ -1,5 +1,6 @@
 ## 0.4.1
 - Enables the user to disable linting in the package settings
+- Fixes problem in highlighting of numerical constants
 
 ## 0.4.0
 - Combines the linter and syntax highlighting package (formerly https://github.com/jjdekker/linter-mzn). I'll look into the possibility of disabling the linter extension at a later stadium.
