@@ -1,3 +1,6 @@
+## 0.5.0 - Column matching
+- The linter now indicates the right column if indicated by `mzn2fzn`
+
 ## 0.4.1
 - Enables the user to disable linting in the package settings
 - Fixes problem in highlighting of numerical constants
