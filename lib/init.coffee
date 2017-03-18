@@ -37,7 +37,7 @@ module.exports = AtomLanguageMZN =
     return {
       name: 'MiniZinc',
       grammarScopes: ['source.mzn'],
-      scope: 'file', # or 'project'
-      lintOnFly: true,
+      scope: 'file',
+      lintsOnChange: true,
       lint: @provider.lint
     }

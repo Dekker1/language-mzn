@@ -61,10 +61,12 @@ class LinterMZN
       endcol = output[2].match(/\^(\s|$)/).index + 1
 
     message = {
-      type: 'Error',
-      text: output[1..].join('\n').replace(/MiniZinc: /, ""),
-      range: [[line-1,startcol], [line-1,endcol]],
-      filePath: filePath,
+      severity: 'error',
+      excerpt: output[1..].join('\n').replace(/MiniZinc: /, ""),
+      location:{
+        file: filePath,
+        position: [[line-1,startcol], [line-1,endcol]],
+      }
     }
 
     return message

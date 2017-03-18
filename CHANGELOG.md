@@ -1,3 +1,6 @@
+## 0.6.0 - Linter v2
+- Upgrade to Linter API v2
+
 ## 0.5.0 - Column matching
 - The linter now indicates the right column if indicated by `mzn2fzn`
 
