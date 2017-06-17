@@ -1,3 +1,6 @@
+## 0.6.1 - Moved repository
+- Change the repository URL
+
 ## 0.6.0 - Linter v2
 - Upgrade to Linter API v2
 
