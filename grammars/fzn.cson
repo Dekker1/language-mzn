@@ -1,0 +1,13 @@
+'scopeName': 'source.fzn'
+'name': 'FlatZinc'
+'comment': 'FlatZinc is the target constraint modelling language into which MiniZinc models are translated'
+'fileTypes': [
+  'fzn'
+  'ozn'
+]
+
+'patterns': [
+  {
+    'include': 'source.mzn'
+  }
+]

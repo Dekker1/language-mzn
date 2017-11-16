@@ -1,0 +1,12 @@
+'scopeName': 'source.dzn'
+'name': 'MiniZinc Data File'
+'comment': 'MiniZinc data files contain the values of parameters declared in a MiniZinc model.'
+'fileTypes': [
+  'dzn'
+]
+
+'patterns': [
+  {
+    'include': 'source.mzn'
+  }
+]

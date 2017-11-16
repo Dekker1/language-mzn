@@ -3,7 +3,6 @@
 'comment': 'The MiniZinc medium level constraint modeling language'
 'fileTypes': [
   'mzn'
-  'dzn'
 ]
 
 'patterns':[

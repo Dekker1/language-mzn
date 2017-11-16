@@ -1,3 +1,7 @@
+## 0.7.0 - Split grammar definitions
+- Create seperate definitions for FlatZinc + Output models and DZN files.
+- Fixes linting error when opening DZN files
+
 ## 0.6.1 - Moved repository
 - Change the repository URL
 
