@@ -1,3 +1,6 @@
+## WIP
+- Improved error message parsing
+
 ## 0.7.0 - Split grammar definitions
 - Create seperate definitions for FlatZinc + Output models and DZN files.
 - Fixes linting error when opening DZN files

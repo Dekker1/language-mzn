@@ -53,16 +53,18 @@ class LinterMZN
   generateMessage: (output, filePath) ->
     match = output[0].match(/:([0-9]+):/)
     line = parseInt(match[1])
+    output = output[1..]
 
     startcol = 0
     endcol = 500;
-    if output.length > 2 and /\^/.test(output[2])
-      startcol = output[2].match(/\^/).index
-      endcol = output[2].match(/\^(\s|$)/).index + 1
+    if output.length > 1 and /\^/.test(output[1])
+      startcol = output[1].match(/\^/).index
+      endcol = output[1].match(/\^(\s|$)/).index + 1
+      output = output[2..]
 
     message = {
       severity: 'error',
-      excerpt: output[1..].join('\n').replace(/MiniZinc: /, ""),
+      excerpt: output.join('\n').replace(/MiniZinc: /, ""),
       location:{
         file: filePath,
         position: [[line-1,startcol], [line-1,endcol]],
