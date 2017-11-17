@@ -1,6 +1,6 @@
 # MiniZinc for Atom
 
-This package adds syntax highlighting and optional linting for the MiniZinc modeling language (.mzn and .dzn files). The package is based on the [similar package for Sublime](https://github.com/astenmark/sublime-mzn).
+This package provides a MiniZinc grammar for Atom to add syntax highlighting.
 
 ![A small preview](https://raw.githubusercontent.com/jjdekker/language-mzn/master/sample.png)
 

@@ -2,9 +2,7 @@
 include "globals.mzn";
 
 % parameters
-int: n=;
-
-
+int: n=8;
 
 % variables
 array[1..n] of var 1..n: R;
