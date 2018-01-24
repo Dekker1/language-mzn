@@ -40,7 +40,7 @@
   }
 
   {
-    'match': '\\b(for|forall|if|then|else|endif|where)\\b'
+    'match': '\\b(for|forall|if|then|elseif|else|endif|where)\\b'
     'name': 'keyword.control.mzn'
   }
 

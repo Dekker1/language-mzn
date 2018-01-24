@@ -4,6 +4,10 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
+## [0.8.1] - 2018-01-24
+### Fixed
+- Added the forgotten `elseif` keyword
+
 ## [0.8.0] - 2017-11-17
 ### Removed
 - Moved the linting functionality into a seperate package, [`linter-mzn`](https://github.com/Dekker1/linter-mzn). With eyes to the future and possibility for a full MiniZinc Suite in Atom.
