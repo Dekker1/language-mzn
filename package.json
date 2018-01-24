@@ -1,6 +1,6 @@
 {
   "name": "language-mzn",
-  "version": "0.8.0",
+  "version": "0.8.1",
   "description": "A language package for the MiniZinc constraint modeling language",
   "repository": "https://github.com/Dekker1/language-mzn",
   "license": "MIT",
