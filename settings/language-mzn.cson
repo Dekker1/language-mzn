@@ -1,5 +1,6 @@
-'.source.mzn':
+'.source.dzn, .source.fzn, .source.mzn':
   'editor':
     'commentStart': '% '
     'increaseIndentPattern': '^.*\\([^\\)\\"\']*$'
     'decreaseIndentPattern': '^(.*\\*/)?\\s*\\)[;\\s]*$'
+    'foldEndPattern': '^\\s*\\}|^\\s*\\]|^\\s*\\)'
