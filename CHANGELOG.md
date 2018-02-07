@@ -7,6 +7,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ## [Unreleased]
 ### Changed
 - Apply language settings to FZN and DZN files as well
+- Use Iro generated syntax highlighting!
 
 ## [0.8.1] - 2018-01-24
 ### Fixed

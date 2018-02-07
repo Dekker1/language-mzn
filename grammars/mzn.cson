@@ -1,145 +1,515 @@
-'scopeName': 'source.mzn'
-'name': 'MiniZinc'
-'comment': 'The MiniZinc medium level constraint modeling language'
-'fileTypes': [
+'fileTypes' : [
   'mzn'
+  'fzn'
+  'dzn'
 ]
-
-'patterns':[
+'name' : 'mzn'
+'patterns' : [
   {
-    'comment': 'Line comments'
-    'match': '\\%.*'
-    'name': 'comment.line.percentage.mzn'
-  }
-
-  {
-    'comment': 'Block comments'
-    'begin': '/\\*'
-    'end': '\\*/'
-    'name': 'comment.block.mzn'
-  }
-
-  {
-    'match': '\\\'.*?\\\''
-    'name': 'string.quoted.single.mzn'
-  }
-
-  {
-    'match': '\\".*?\\"'
-    'name': 'string.quoted.double.mzn'
-  }
-
-  {
-    'match': '\\b(ann|annotation|any|constraint|function|in|include|list|of|op|output|minimize|maximize|par|predicate|record|satisfy|solve|test|type|var)\\b'
-    'name': 'keyword.control.mzn'
-  }
-
-  {
-    'match': '\\b(array|set|bool|enum|float|int|string|tuple)\\b'
-    'name': 'storage.type.mzn'
-  }
-
-  {
-    'match': '\\b(for|forall|if|then|elseif|else|endif|where)\\b'
-    'name': 'keyword.control.mzn'
-  }
-
-  {
-    'match': '\\b(abort|abs|acosh|array_intersect|array_union|array1d|array2d|array3d|array4d|array5d|array6d|asin|assert|atan|bool2int|card|ceil|concat|cos|cosh|dom|dom_array|dom_size|fix|exp|floor|index_set|index_set_1of2|index_set_2of2|index_set_1of3|index_set_2of3|index_set_3of3|int2float|is_fixed|join|lb|lb_array|length|ln|log|log2|log10|min|max|pow|product|round|set2array|show|show_int|show_float|sin|sinh|sqrt|sum|tan|tanh|trace|ub|ub_array)\\b'
-    'name': 'entity.name.function.mzn'
-  }
-
-  {
-    'comment': 'Global constraints'
-    'match': '\\b(circuit|disjoint|maximum|maximum_arg|member|minimum|minimum_arg|network_flow|network_flow_cost|partition_set|range|roots|sliding_sum|subcircuit|sum_pred)\\b'
-    'name': 'support.function.mzn'
-  }
-
-  {
-    'comment': 'All-Different and related constraints'
-    'match': '\\b(alldifferent|all_different|all_disjoint|all_equal|alldifferent_except_0|nvalue|symmetric_all_different)\\b'
-    'name': 'support.function.mzn'
-  }
-
-  {
-    'comment': 'Lexicographic constraints'
-    'match': '\\b(lex2|lex_greater|lex_greatereq|lex_less|lex_lesseq|strict_lex2|value_precede|value_precede_chain)\\b'
-    'name': 'support.function.mzn'
-  }
-
-  {
-    'comment': 'Sorting constraints'
-    'match': '\\b(arg_sort|decreasing|increasing|sort)\\b'
-    'name': 'support.function.mzn'
-  }
-
-  {
-    'comment': 'Channeling constraints'
-    'match': '\\b(int_set_channel|inverse|inverse_set|link_set_to_booleans)\\b'
-    'name': 'support.function.mzn'
-  }
-
-  {
-    'comment': 'Counting constraints'
-    'match': '\\b(among|at_least|at_most|at_most1|count|count_eq|count_geq|count_gt|count_leq|count_lt|count_neq|distribute|exactly|global_cardinality|global_cardinality_closed|global_cardinality_low_up|global_cardinality_low_up_closed)\\b'
-    'name': 'support.function.mzn'
-  }
-
-  {
-    'comment': 'Packing constraints'
-    'match': '\\b(bin_packing|bin_packing_capa|bin_packing_load|diffn|diffn_k|diffn_nonstrict|diffn_nonstrict_k|geost|geost_bb|geost_smallest_bb|knapsack)\\b'
-    'name': 'support.function.mzn'
-  }
-
-  {
-    'comment': 'Scheduling constraints'
-    'match': '\\b(alternative|cumulative|disjunctive|disjunctive_strict|span)\\b'
-    'name': 'support.function.mzn'
-  }
-
-  {
-    'comment': 'Extensional constraints (table, regular etc.)'
-    'match': '\\b(regular|regular_nfa|table)\\b'
-    'name': 'support.function.mzn'
-  }
-
-  {
-    'match': '\\b(not|&lt;-&gt;|-&gt;|&lt;-|\\\\/|xor|/\\\\)\\b'
-    'name': 'keyword.operator.logical.mzn'
-  }
-
-  {
-    'match': '\\b(&lt;|&gt;|&lt;=|&gt;=|==|=|!=)\\b'
-    'name': 'keyword.operator.math.mzn'
-  }
-
-  {
-    'match': '\\b(\\+|-|\\*|/|div|mod)\\b'
-    'name': 'keyword.operator.math.mzn'
-  }
-
-  {
-    'match': '\\b(in|subset|superset|union|diff|symdiff|intersect)\\b'
-    'name': 'keyword.operator.sets.mzn'
-  }
-
-  {
-    'match': '\\|\\.\\.|\\+\\+'
-    'name': 'keyword.operator.math.mzn'
-  }
-
-  {
-    'match': '\\b(true|false)\\b'
-    'name': 'constant.language.mzn'
-  }
-
-  {
-    'match': '\\b([_A-Za-z])(\\w*)\\b'
-    'name': 'variable.other.mzn'
-  }
-
-  {
-    'match': '([+-]?)\\d+(\\.(?!\\.)\\d*)?([eE][-+]?\\d+)?'
-    'name': 'constant.numeric.mzn'
+    'include' : '#main'
   }
 ]
+'scopeName' : 'source.mzn'
+'uuid' : ''
+'repository' : {
+  'main' : {
+    'patterns' : [
+      {
+        'include' : '#multi_line_comment'
+      }
+      {
+        'match' : '(%.*)'
+        'captures' : {
+          '1' : {
+            'name' : 'comment.mzn'
+          }
+        }
+        'comment' : 'line comment'
+      }
+      {
+        'include' : '#numeric'
+      }
+      {
+        'include' : '#string'
+      }
+      {
+        'match' : '(\\b(?:true|false)\\b)'
+        'captures' : {
+          '1' : {
+            'name' : 'constant.language.mzn'
+          }
+        }
+        'comment' : 'Boolean literal'
+      }
+      {
+        'match' : '(\\bnot\\b|<->|->|<-|\\\\/|\\bxor\\b|/\\\\)'
+        'captures' : {
+          '1' : {
+            'name' : 'keyword.operator.mzn'
+          }
+        }
+        'comment' : 'logical operator'
+      }
+      {
+        'match' : '(<|>|<=|>=|==|=|!=)'
+        'captures' : {
+          '1' : {
+            'name' : 'keyword.operator.mzn'
+          }
+        }
+        'comment' : 'equality operator'
+      }
+      {
+        'match' : '(\\+|-|\\*|/|\\bdiv\\b|\\bmod\\b)'
+        'captures' : {
+          '1' : {
+            'name' : 'keyword.operator.mzn'
+          }
+        }
+        'comment' : 'linear operator'
+      }
+      {
+        'match' : '(\\b(?:in|subset|superset|union|diff|symdiff|intersect)\\b|\\.\\.)'
+        'captures' : {
+          '1' : {
+            'name' : 'keyword.operator.mzn'
+          }
+        }
+        'comment' : 'set operator'
+      }
+      {
+        'match' : '(;)'
+        'captures' : {
+          '1' : {
+            'name' : 'punctuation.mzn'
+          }
+        }
+        'comment' : 'terminator'
+      }
+      {
+        'match' : '(:)'
+        'captures' : {
+          '1' : {
+            'name' : 'punctuation.mzn'
+          }
+        }
+      }
+      {
+        'match' : '(,)'
+        'captures' : {
+          '1' : {
+            'name' : 'punctuation.mzn'
+          }
+        }
+      }
+      {
+        'begin' : '(\\{)'
+        'beginCaptures' : {
+          '1' : {
+            'name' : 'punctuation.mzn'
+          }
+        }
+        'patterns' : [
+          {
+            'include' : '#main__1'
+          }
+        ]
+        'end' : '(\\})'
+        'endCaptures' : {
+          '1' : {
+            'name' : 'punctuation.mzn'
+          }
+        }
+      }
+      {
+        'begin' : '(\\[)'
+        'beginCaptures' : {
+          '1' : {
+            'name' : 'punctuation.mzn'
+          }
+        }
+        'patterns' : [
+          {
+            'include' : '#main__2'
+          }
+        ]
+        'end' : '(\\])'
+        'endCaptures' : {
+          '1' : {
+            'name' : 'punctuation.mzn'
+          }
+        }
+      }
+      {
+        'begin' : '(\\()'
+        'beginCaptures' : {
+          '1' : {
+            'name' : 'punctuation.mzn'
+          }
+        }
+        'patterns' : [
+          {
+            'include' : '#main__3'
+          }
+        ]
+        'end' : '(\\))'
+        'endCaptures' : {
+          '1' : {
+            'name' : 'punctuation.mzn'
+          }
+        }
+      }
+      {
+        'match' : '(\\}|\\]|\\))'
+        'captures' : {
+          '1' : {
+            'name' : 'invalid.illegal.mzn'
+          }
+        }
+        'comment' : 'unmatched bracket'
+      }
+      {
+        'match' : '(\\|)'
+        'captures' : {
+          '1' : {
+            'name' : 'invalid.illegal.mzn'
+          }
+        }
+        'comment' : 'illegal pipe character'
+      }
+      {
+        'match' : '(\\b(?:ann|annotation|any|constraint|function|in|include|list|op|output|minimize|maximize|predicate|record|satisfy|solve|test|type)\\b)'
+        'captures' : {
+          '1' : {
+            'name' : 'keyword.control.mzn'
+          }
+        }
+        'comment' : 'item keyword'
+      }
+      {
+        'match' : '(\\b(?:array|set|bool|enum|float|int|of|par|string|tuple|var)\\b)'
+        'captures' : {
+          '1' : {
+            'name' : 'storage.type.mzn'
+          }
+        }
+        'comment' : 'type keyword'
+      }
+      {
+        'match' : '(\\b(?:for|forall|if|then|elseif|else|endif|where)\\b)'
+        'captures' : {
+          '1' : {
+            'name' : 'keyword.control.mzn'
+          }
+        }
+        'comment' : 'expression keyword'
+      }
+      {
+        'match' : '(\\b(?:abort|abs|acosh|array_intersect|array_union|array1d|array2d|array3d|array4d|array5d|array6d|asin|assert|atan|bool2int|card|ceil|concat|cos|cosh|dom|dom_array|dom_size|fix|exp|floor|index_set|index_set_1of2|index_set_2of2|index_set_1of3|index_set_2of3|index_set_3of3|int2float|is_fixed|join|lb|lb_array|length|ln|log|log2|log10|min|max|pow|product|round|set2array|show|show_int|show_float|sin|sinh|sqrt|sum|tan|tanh|trace|ub|ub_array)\\b)'
+        'captures' : {
+          '1' : {
+            'name' : 'support.function.mzn'
+          }
+        }
+        'comment' : 'builtin function (stdlib)'
+      }
+      {
+        'match' : '(\\b(?:circuit|disjoint|maximum|maximum_arg|member|minimum|minimum_arg|network_flow|network_flow_cost|partition_set|range|roots|sliding_sum|subcircuit|sum_pred)\\b)'
+        'captures' : {
+          '1' : {
+            'name' : 'support.function.mzn'
+          }
+        }
+        'comment' : 'general predicates (globals)'
+      }
+      {
+        'match' : '(\\b(?:alldifferent|all_different|all_disjoint|all_equal|alldifferent_except_0|nvalue|symmetric_all_different)\\b)'
+        'captures' : {
+          '1' : {
+            'name' : 'support.function.mzn'
+          }
+        }
+        'comment' : 'all different and related constraints (globals)'
+      }
+      {
+        'match' : '(\\b(?:lex2|lex_greater|lex_greatereq|lex_less|lex_lesseq|strict_lex2|value_precede|value_precede_chain)\\b)'
+        'captures' : {
+          '1' : {
+            'name' : 'support.function.mzn'
+          }
+        }
+        'comment' : 'lexicographic constraints (globals)'
+      }
+      {
+        'match' : '(\\b(?:arg_sort|decreasing|increasing|sort)\\b)'
+        'captures' : {
+          '1' : {
+            'name' : 'support.function.mzn'
+          }
+        }
+        'comment' : 'sorting constraints (globals)'
+      }
+      {
+        'match' : '(\\b(?:int_set_channel|inverse|inverse_set|link_set_to_booleans)\\b)'
+        'captures' : {
+          '1' : {
+            'name' : 'support.function.mzn'
+          }
+        }
+        'comment' : 'channeling constraints (globals)'
+      }
+      {
+        'match' : '(\\b(?:among|at_least|at_most|at_most1|count|count_eq|count_geq|count_gt|count_leq|count_lt|count_neq|distribute|exactly|global_cardinality|global_cardinality_closed|global_cardinality_low_up|global_cardinality_low_up_closed)\\b)'
+        'captures' : {
+          '1' : {
+            'name' : 'support.function.mzn'
+          }
+        }
+        'comment' : 'counting constraints (globals)'
+      }
+      {
+        'match' : '(\\b(?:bin_packing|bin_packing_capa|bin_packing_load|diffn|diffn_k|diffn_nonstrict|diffn_nonstrict_k|geost|geost_bb|geost_smallest_bb|knapsack)\\b)'
+        'captures' : {
+          '1' : {
+            'name' : 'support.function.mzn'
+          }
+        }
+        'comment' : 'packing constraints (globals)'
+      }
+      {
+        'match' : '(\\b(?:alternative|cumulative|disjunctive|disjunctive_strict|span)\\b)'
+        'captures' : {
+          '1' : {
+            'name' : 'support.function.mzn'
+          }
+        }
+        'comment' : 'scheduling constraints (globals)'
+      }
+      {
+        'match' : '(\\b(?:regular|regular_nfa|table)\\b)'
+        'captures' : {
+          '1' : {
+            'name' : 'support.function.mzn'
+          }
+        }
+        'comment' : 'extensional constraints (globals)'
+      }
+      {
+        'begin' : '(\\b[A-Za-z][A-Za-z0-9_]*|\'[^\\x{0027}]*\')(\\()'
+        'beginCaptures' : {
+          '1' : {
+            'name' : 'entity.name.function.mzn'
+          }
+          '2' : {
+            'name' : 'punctuation.mzn'
+          }
+        }
+        'patterns' : [
+          {
+            'include' : '#main__4'
+          }
+        ]
+        'end' : '(\\))'
+        'endCaptures' : {
+          '1' : {
+            'name' : 'punctuation.mzn'
+          }
+        }
+      }
+      {
+        'match' : '(\\b[A-Za-z][A-Za-z0-9_]*|\'[^\\x{0027}]*\')'
+        'captures' : {
+          '1' : {
+            'name' : 'variable.mzn'
+          }
+        }
+        'comment' : 'variable'
+      }
+    ]
+  }
+  'main__1' : {
+    'patterns' : [
+      {
+        'match' : '(\\|)'
+        'captures' : {
+          '1' : {
+            'name' : 'punctuation.mzn'
+          }
+        }
+      }
+      {
+        'include' : '#main'
+      }
+    ]
+  }
+  'main__2' : {
+    'patterns' : [
+      {
+        'match' : '(\\|)'
+        'captures' : {
+          '1' : {
+            'name' : 'punctuation.mzn'
+          }
+        }
+      }
+      {
+        'include' : '#main'
+      }
+    ]
+  }
+  'main__3' : {
+    'patterns' : [
+      {
+        'include' : '#main'
+      }
+    ]
+  }
+  'main__4' : {
+    'patterns' : [
+      {
+        'include' : '#main'
+      }
+    ]
+  }
+  'multi_line_comment' : {
+    'patterns' : [
+      {
+        'begin' : '(/\\*)'
+        'beginCaptures' : {
+          '1' : {
+            'name' : 'comment.mzn'
+          }
+        }
+        'contentName' : 'comment.mzn'
+        'end' : '(\\*/)'
+        'endCaptures' : {
+          '1' : {
+            'name' : 'comment.mzn'
+          }
+        }
+      }
+    ]
+  }
+  'multi_line_comment__1' : {
+    'patterns' : [
+    ]
+  }
+  'numeric' : {
+    'patterns' : [
+      {
+        'match' : '(\\b0o[0-7]+)'
+        'captures' : {
+          '1' : {
+            'name' : 'constant.numeric.mzn'
+          }
+        }
+        'comment' : 'octal integer number'
+      }
+      {
+        'match' : '(\\b0x[0-9A-Fa-f]+)'
+        'captures' : {
+          '1' : {
+            'name' : 'constant.numeric.mzn'
+          }
+        }
+        'comment' : 'hexadecimal number'
+      }
+      {
+        'match' : '(\\b0x[0-9A-Fa-f]+)'
+        'captures' : {
+          '1' : {
+            'name' : 'constant.numeric.mzn'
+          }
+        }
+        'comment' : 'hexadecimal number'
+      }
+      {
+        'match' : '(\\b\\d+(?:(?:.\\d+)?[Ee][-\\x{002b}]?\\d+|.\\d+))'
+        'captures' : {
+          '1' : {
+            'name' : 'constant.numeric.mzn'
+          }
+        }
+        'comment' : 'floating point number'
+      }
+      {
+        'match' : '(\\b\\d+)'
+        'captures' : {
+          '1' : {
+            'name' : 'constant.numeric.mzn'
+          }
+        }
+        'comment' : 'integer number'
+      }
+    ]
+  }
+  'string' : {
+    'patterns' : [
+      {
+        'begin' : '(\\")'
+        'beginCaptures' : {
+          '1' : {
+            'name' : 'string.mzn'
+          }
+        }
+        'patterns' : [
+          {
+            'include' : '#string__1'
+          }
+        ]
+        'end' : '(\\")'
+        'endCaptures' : {
+          '1' : {
+            'name' : 'string.mzn'
+          }
+        }
+      }
+    ]
+  }
+  'string__1' : {
+    'patterns' : [
+      {
+        'begin' : '(\\\\\\()'
+        'beginCaptures' : {
+          '1' : {
+            'name' : 'punctuation.mzn'
+          }
+        }
+        'patterns' : [
+          {
+            'include' : '#string__2'
+          }
+        ]
+        'end' : '(\\))'
+        'endCaptures' : {
+          '1' : {
+            'name' : 'punctuation.mzn'
+          }
+        }
+      }
+      {
+        'match' : '(\\\\[\\x{0022}\\x{0027}\\x{005c}nrvt])'
+        'captures' : {
+          '1' : {
+            'name' : 'constant.character.escape.mzn'
+          }
+        }
+      }
+      {
+        'match' : '([^\\"\\x{005c}]+)'
+        'captures' : {
+          '1' : {
+            'name' : 'string.mzn'
+          }
+        }
+      }
+    ]
+  }
+  'string__2' : {
+    'patterns' : [
+      {
+        'include' : '#main'
+      }
+    ]
+  }
+}
